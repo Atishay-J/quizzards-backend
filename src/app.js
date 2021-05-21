@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const fillQuizCollection = require("./utils/databaseInit");
 
-const port = process.eventNames.PORT || 8000;
+const port = process.env.PORT || 8000;
 
 require("dotenv/config");
 require("./Db/conn");
