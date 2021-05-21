@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const router = require("./Routers/quizRouter");
+const cors = require("cors");
 
 const fillQuizCollection = require("./utils/databaseInit");
 
@@ -9,6 +10,7 @@ const port = process.eventNames.PORT || 8000;
 require("dotenv/config");
 require("./Db/conn");
 
+app.use(cors());
 app.use(express.json());
 app.use(router);
 
